@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "C": {
+      "tag": "forge:ingots/copper"
+    },
+    "G": {
+      "tag": "forge:glass_panes/colorless"
+    },
+    "L": {
+      "tag": "forge:gems/lapis"
+    }
+  },
+  "pattern": [
+    "GCG",
+    "GCG",
+    "LCL"
+  ],
+  "result": {
+    "item": "dysoncubeproject:solar_sail"
+  },
+  "show_notification": true
+}

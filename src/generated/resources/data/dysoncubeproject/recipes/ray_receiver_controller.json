@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "B": {
+      "item": "dysoncubeproject:beam"
+    },
+    "I": {
+      "tag": "forge:storage_blocks/iron"
+    },
+    "N": {
+      "item": "minecraft:smooth_stone_slab"
+    },
+    "S": {
+      "item": "dysoncubeproject:solar_sail"
+    }
+  },
+  "pattern": [
+    "SSS",
+    "NBN",
+    "III"
+  ],
+  "result": {
+    "item": "dysoncubeproject:ray_receiver_controller"
+  },
+  "show_notification": true
+}

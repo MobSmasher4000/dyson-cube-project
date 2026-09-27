@@ -1,0 +1,30 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "B": {
+      "item": "dysoncubeproject:beam"
+    },
+    "C": {
+      "tag": "forge:storage_blocks/copper"
+    },
+    "D": {
+      "tag": "forge:gems/diamond"
+    },
+    "R": {
+      "tag": "forge:dusts/redstone"
+    },
+    "S": {
+      "item": "minecraft:smooth_stone_slab"
+    }
+  },
+  "pattern": [
+    "DRB",
+    "RCB",
+    "SSS"
+  ],
+  "result": {
+    "item": "dysoncubeproject:em_railejector_controller"
+  },
+  "show_notification": true
+}
