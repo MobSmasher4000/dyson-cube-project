@@ -30,6 +30,18 @@ public class ModRecipeProvider extends RecipeProvider {
                 .unlockedBy(getHasName(Items.IRON_INGOT), has(Items.IRON_INGOT))
                 .save(consumer);
 
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.RAY_RECEIVER_CONTROLLER.getKey().get())
+                .pattern("SSS")
+                .pattern("NBN")
+                .pattern("III")
+                .define('S', ModItems.SOLAR_SAIL.get())
+                .define('N', Items.SMOOTH_STONE_SLAB)
+                .define('I', Tags.Items.STORAGE_BLOCKS_IRON)
+                .define('B', ModItems.BEAM.get())
+                .unlockedBy(getHasName(Items.IRON_INGOT), has(Items.IRON_INGOT))
+                .save(consumer);
+
+        // Solar Sails
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.SOLAR_SAIL.get())
                 .pattern("GCG")
                 .pattern("GCG")
@@ -49,6 +61,26 @@ public class ModRecipeProvider extends RecipeProvider {
                 .unlockedBy(getHasName(Items.IRON_INGOT), has(Items.IRON_INGOT))
                 .save(consumer);
 
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.COMPRESSED_SOLAR_SAIL_PACKAGE.get())
+                .pattern("GGG")
+                .pattern("GIG")
+                .pattern("GGG")
+                .define('G', ModItems.SOLAR_SAIL_PACKAGE.get())
+                .define('I', Tags.Items.NETHER_STARS)
+                .unlockedBy(getHasName(Items.IRON_INGOT), has(Items.IRON_INGOT))
+                .save(consumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.LIVING_COMPRESSED_SOLAR_SAIL_PACKAGE.get())
+                .pattern(" G ")
+                .pattern("GIG")
+                .pattern(" G ")
+                .define('G', ModItems.COMPRESSED_SOLAR_SAIL_PACKAGE.get())
+                .define('I', Items.DRAGON_EGG)
+                .unlockedBy(getHasName(Items.IRON_INGOT), has(Items.IRON_INGOT))
+                .save(consumer);
+
+
+        // Beams
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.BEAM.get(), 2)
                 .pattern("NIN")
                 .pattern("BIB")
@@ -68,17 +100,23 @@ public class ModRecipeProvider extends RecipeProvider {
                 .unlockedBy(getHasName(Items.IRON_INGOT), has(Items.IRON_INGOT))
                 .save(consumer);
 
-        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.RAY_RECEIVER_CONTROLLER.getKey().get())
-                .pattern("SSS")
-                .pattern("NBN")
-                .pattern("III")
-                .define('S', ModItems.SOLAR_SAIL.get())
-                .define('N', Items.SMOOTH_STONE_SLAB)
-                .define('I', Tags.Items.STORAGE_BLOCKS_IRON)
-                .define('B', ModItems.BEAM.get())
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.COMPRESSED_BEAM_PACKAGE.get())
+                .pattern("GGG")
+                .pattern("GIG")
+                .pattern("GGG")
+                .define('G', ModItems.BEAM_PACKAGE.get())
+                .define('I', Tags.Items.NETHER_STARS)
                 .unlockedBy(getHasName(Items.IRON_INGOT), has(Items.IRON_INGOT))
                 .save(consumer);
 
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.LIVING_COMPRESSED_BEAM_PACKAGE.get())
+                .pattern(" G ")
+                .pattern("GIG")
+                .pattern(" G ")
+                .define('G', ModItems.COMPRESSED_BEAM_PACKAGE.get())
+                .define('I', Items.DRAGON_EGG)
+                .unlockedBy(getHasName(Items.IRON_INGOT), has(Items.IRON_INGOT))
+                .save(consumer);
 
     }
 

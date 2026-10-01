@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "dysoncubeproject:item/living_compressed_beam_package"
+  }
+}

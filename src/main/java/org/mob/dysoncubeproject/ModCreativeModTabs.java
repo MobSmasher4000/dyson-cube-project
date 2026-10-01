@@ -20,8 +20,12 @@ public class ModCreativeModTabs {
                     .displayItems((pParameters, pOutput) -> {
                         pOutput.accept(ModItems.SOLAR_SAIL.get());
                         pOutput.accept(ModItems.SOLAR_SAIL_PACKAGE.get());
+                        pOutput.accept(ModItems.COMPRESSED_SOLAR_SAIL_PACKAGE.get());
+                        pOutput.accept(ModItems.LIVING_COMPRESSED_SOLAR_SAIL_PACKAGE.get());
                         pOutput.accept(ModItems.BEAM.get());
                         pOutput.accept(ModItems.BEAM_PACKAGE.get());
+                        pOutput.accept(ModItems.COMPRESSED_BEAM_PACKAGE.get());
+                        pOutput.accept(ModItems.LIVING_COMPRESSED_BEAM_PACKAGE.get());
                         pOutput.accept(ModBlocks.EM_RAILEJECTOR_CONTROLLER.getLeft().get());
                         pOutput.accept(ModBlocks.RAY_RECEIVER_CONTROLLER.getLeft().get());
 

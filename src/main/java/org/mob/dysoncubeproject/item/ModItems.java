@@ -17,12 +17,21 @@ public class ModItems {
             () -> new DysonComponentItem(1,0));
     public static final RegistryObject<Item> SOLAR_SAIL_PACKAGE = ITEMS.register("solar_sail_package",
             () -> new DysonComponentItem(8,0));
+    public static final RegistryObject<Item> COMPRESSED_SOLAR_SAIL_PACKAGE = ITEMS.register("compressed_solar_sail_package",
+            () -> new DysonComponentItem(64,0));
+    public static final RegistryObject<Item> LIVING_COMPRESSED_SOLAR_SAIL_PACKAGE = ITEMS.register("living_compressed_solar_sail_package",
+            () -> new DysonComponentItem(256,0));
+
 
     // Beam
     public static final RegistryObject<Item> BEAM = ITEMS.register("beam",
             () -> new DysonComponentItem(0,1));
     public static final RegistryObject<Item> BEAM_PACKAGE = ITEMS.register("beam_package",
             () -> new DysonComponentItem(0,4));
+    public static final RegistryObject<Item> COMPRESSED_BEAM_PACKAGE = ITEMS.register("compressed_beam_package",
+            () -> new DysonComponentItem(0,32));
+    public static final RegistryObject<Item> LIVING_COMPRESSED_BEAM_PACKAGE = ITEMS.register("living_compressed_beam_package",
+            () -> new DysonComponentItem(0,128));
 
 
 

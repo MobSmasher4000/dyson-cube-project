@@ -8,6 +8,7 @@ import net.minecraftforge.client.model.generators.ItemModelProvider;
 import net.minecraftforge.common.data.ExistingFileHelper;
 import net.minecraftforge.registries.RegistryObject;
 import org.mob.dysoncubeproject.DysonCubeProject;
+import org.mob.dysoncubeproject.item.ModItems;
 
 public class ModItemModelProvider extends ItemModelProvider {
     public ModItemModelProvider(PackOutput output, ExistingFileHelper existingFileHelper) {
@@ -16,7 +17,10 @@ public class ModItemModelProvider extends ItemModelProvider {
 
     @Override
     protected void registerModels() {
-//        simpleItem(ModItems.STELLAR_ODYSSEY_MUSIC_DISC);
+        simpleItem(ModItems.COMPRESSED_BEAM_PACKAGE);
+        simpleItem(ModItems.LIVING_COMPRESSED_BEAM_PACKAGE);
+        simpleItem(ModItems.COMPRESSED_SOLAR_SAIL_PACKAGE);
+        simpleItem(ModItems.LIVING_COMPRESSED_SOLAR_SAIL_PACKAGE);
     }
 
     private ItemModelBuilder simpleItem(RegistryObject<Item> item){

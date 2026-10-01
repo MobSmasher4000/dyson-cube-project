@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "G": {
+      "item": "dysoncubeproject:solar_sail_package"
+    },
+    "I": {
+      "tag": "forge:nether_stars"
+    }
+  },
+  "pattern": [
+    "GGG",
+    "GIG",
+    "GGG"
+  ],
+  "result": {
+    "item": "dysoncubeproject:compressed_solar_sail_package"
+  },
+  "show_notification": true
+}

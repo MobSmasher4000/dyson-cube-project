@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "G": {
+      "item": "dysoncubeproject:compressed_beam_package"
+    },
+    "I": {
+      "item": "minecraft:dragon_egg"
+    }
+  },
+  "pattern": [
+    " G ",
+    "GIG",
+    " G "
+  ],
+  "result": {
+    "item": "dysoncubeproject:living_compressed_beam_package"
+  },
+  "show_notification": true
+}
