@@ -36,5 +36,20 @@
   "creative_tab.dyson_cube_project": "Dyson Cube Project",
   "tooltip.dysoncubeproject.contains_beams": "Contains %s beam(s)",
   "tooltip.dysoncubeproject.contains_solar_sails": "Contains %s solar sail(s)",
-  "tooltip.dysoncubeproject.power_optional": "*Power Optional, with power it allows to ramp up how many beams/sails are ejected*"
+  "tooltip.dysoncubeproject.power_optional": "*Power Optional, with power it allows to ramp up how many beams/sails are ejected*",
+  "tooltip.dysoncubeproject.save": "Save",
+  "tooltip.dysoncubeproject.connect": "Connect",
+  "tooltip.dysoncubeproject.cancel": "Cancel",
+  "tooltip.dysoncubeproject.connected": "Connected",
+  "tooltip.dysoncubeproject.disconnect": "Left-Click to Disconnect",
+  "tooltip.dysoncubeproject.locked": "Locked Dyson Network",
+  "tooltip.dysoncubeproject.enter_left_password": "Left-Click to Enter Password",
+  "tooltip.dysoncubeproject.status_protected": "Status: Password Protected",
+  "tooltip.dysoncubeproject.status_public": "Status: Public",
+  "tooltip.dysoncubeproject.configure_password": "Right-Click to Configure Password",
+  "tooltip.dysoncubeproject.incorrect_password": "Incorrect Dyson Cube password.",
+  "tooltip.dysoncubeproject.password_cleared": "Dyson Sphere password cleared (Public).",
+  "tooltip.dysoncubeproject.password_updated": "Dyson Sphere password updated.",
+  "tooltip.dysoncubeproject.set_password": "Set Sphere Password",
+  "tooltip.dysoncubeproject.enter_password": "Enter Network Password"
 }

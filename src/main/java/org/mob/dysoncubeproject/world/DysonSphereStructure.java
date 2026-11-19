@@ -11,6 +11,8 @@ public class DysonSphereStructure implements INBTSerializable<CompoundTag> {
     private int solarPanels;
     private int storedPower;
     private int lastConsumedPower;
+    private String password = "";
+    private boolean hasPassword = false;
 
     public DysonSphereStructure() {
         this(0, 0);
@@ -79,6 +81,19 @@ public class DysonSphereStructure implements INBTSerializable<CompoundTag> {
         return lastConsumedPower;
     }
 
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password == null ? "" : password.trim();
+        this.hasPassword = !this.password.isEmpty();
+    }
+
+    public boolean hasPassword() {
+        return hasPassword;
+    }
+
     @Override
     public @UnknownNullability CompoundTag serializeNBT() {
         CompoundTag compoundTag = new CompoundTag();
@@ -86,6 +101,18 @@ public class DysonSphereStructure implements INBTSerializable<CompoundTag> {
         compoundTag.putInt("solarPanels", solarPanels);
         compoundTag.putInt("storedPower", storedPower);
         compoundTag.putInt("lastConsumedPower", lastConsumedPower);
+        compoundTag.putString("password", password);
+        compoundTag.putBoolean("hasPassword", hasPassword);
+        return compoundTag;
+    }
+
+    public CompoundTag serializeClientNBT() {
+        CompoundTag compoundTag = new CompoundTag();
+        compoundTag.putInt("beams", beams);
+        compoundTag.putInt("solarPanels", solarPanels);
+        compoundTag.putInt("storedPower", storedPower);
+        compoundTag.putInt("lastConsumedPower", lastConsumedPower);
+        compoundTag.putBoolean("hasPassword", !password.isEmpty());
         return compoundTag;
     }
 
@@ -95,5 +122,11 @@ public class DysonSphereStructure implements INBTSerializable<CompoundTag> {
         this.solarPanels = compoundTag.getInt("solarPanels");
         this.storedPower = compoundTag.getInt("storedPower");
         this.lastConsumedPower = compoundTag.getInt("lastConsumedPower");
+        if (compoundTag.contains("password")) {
+            setPassword(compoundTag.getString("password"));
+        } else {
+            this.password = "";
+            this.hasPassword = compoundTag.getBoolean("hasPassword");
+        }
     }
 }
