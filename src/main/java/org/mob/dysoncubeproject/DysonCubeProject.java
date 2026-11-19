@@ -36,6 +36,7 @@ import org.mob.dysoncubeproject.block.ModBlocks;
 import org.mob.dysoncubeproject.client.ClientSetup;
 import org.mob.dysoncubeproject.datagen.ModLootTableProvider;
 import org.mob.dysoncubeproject.item.ModItems;
+import org.mob.dysoncubeproject.network.ClientSetSpherePasswordMessage;
 import org.mob.dysoncubeproject.network.ClientSubscribeSphereMessage;
 import org.mob.dysoncubeproject.network.DysonSphereSyncMessage;
 import org.mob.dysoncubeproject.sound.ModSounds;
@@ -66,6 +67,7 @@ public class DysonCubeProject extends ModuleController {
 
         NETWORK.registerMessage(DysonSphereSyncMessage.class);
         NETWORK.registerMessage(ClientSubscribeSphereMessage.class);
+        NETWORK.registerMessage(ClientSetSpherePasswordMessage.class);
 
         if (FMLEnvironment.dist == Dist.CLIENT) {
             ClientSetup.init();
@@ -78,7 +80,7 @@ public class DysonCubeProject extends ModuleController {
                     if (data == null) return;
 
                     if (serverLevel.getGameTime() % 4 == 0) {
-                        var packet = new DysonSphereSyncMessage(data.save(new CompoundTag()));
+                        var packet = new DysonSphereSyncMessage(data.saveForClient(new CompoundTag()));
                         for (ServerPlayer player : serverLevel.getServer().getPlayerList().getPlayers()) {
                             NETWORK.get().send(net.minecraftforge.network.PacketDistributor.PLAYER.with(() -> player), packet);
                         }
