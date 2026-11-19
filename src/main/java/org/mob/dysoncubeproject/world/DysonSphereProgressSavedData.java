@@ -63,21 +63,6 @@ public class DysonSphereProgressSavedData extends SavedData {
         return compoundTag;
     }
 
-    public CompoundTag saveForClient(CompoundTag compoundTag) {
-        var spheres = new CompoundTag();
-        for (String key : this.spheres.keySet()) {
-            spheres.put(key, this.spheres.get(key).serializeClientNBT());
-        }
-        var subscribedPlayers = new CompoundTag();
-        for (String key : this.subscribedPlayers.keySet()) {
-            subscribedPlayers.putString(key, this.subscribedPlayers.get(key));
-        }
-
-        compoundTag.put("spheres", spheres);
-        compoundTag.put("subscribedPlayers", subscribedPlayers);
-        return compoundTag;
-    }
-
     public HashMap<String, DysonSphereStructure> getSpheres() {
         return spheres;
     }
