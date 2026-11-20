@@ -101,7 +101,7 @@ repositories {
             includeGroup 'curse.maven'
         }
     }
-    maven { url 'https://maven.blakesmods.com' }
+//    maven { url 'https://maven.blakesmods.com' }
     maven { url 'https://maven.blamejared.com' }
     maven { url 'https://maven.tterrag.com' }
     mavenCentral()
