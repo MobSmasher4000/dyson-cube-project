@@ -300,8 +300,10 @@ public class EMRailEjectorBlockEntity extends BasicTile<EMRailEjectorBlockEntity
         List<IFactory<? extends IScreenAddon>> list = new ArrayList<>();
         list.addAll(this.input.getScreenAddons());
         list.add(() -> new DysonProgressGuiAddon(this.dysonSphereId, 62, 24));
-        list.add(() -> new SubscribeDysonGuiAddon(this.dysonSphereId, 9, 24 + 60));
-        list.add(() -> new UnsubscribeDysonGuiAddon(9 + 18, 24 + 60));
+        if (Config.ALLOW_DYSON_CUBE_SHARING){
+            list.add(() -> new SubscribeDysonGuiAddon(this.dysonSphereId, 9, 24 + 60));
+            list.add(() -> new UnsubscribeDysonGuiAddon(9 + 18, 24 + 60));
+        }
         list.addAll(this.power.getScreenAddons());
         list.addAll(this.progressBarComponent.getScreenAddons());
 
