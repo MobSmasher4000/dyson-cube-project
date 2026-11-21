@@ -189,8 +189,10 @@ public class RayReceiverBlockEntity extends BasicTile<RayReceiverBlockEntity> im
         List<IFactory<? extends IScreenAddon>> list = new ArrayList<>();
         list.addAll(this.energyStorageComponent.getScreenAddons());
         list.add(() -> new DysonProgressGuiAddon(this.dysonSphereId, 56, 24));
-        list.add(() -> new SubscribeDysonGuiAddon(this.dysonSphereId, 9, 24 + 60));
-        list.add(() -> new UnsubscribeDysonGuiAddon(9 + 18, 24 + 60));
+        if (Config.ALLOW_DYSON_CUBE_SHARING){
+            list.add(() -> new SubscribeDysonGuiAddon(this.dysonSphereId, 9, 24 + 60));
+            list.add(() -> new UnsubscribeDysonGuiAddon(9 + 18, 24 + 60));
+        }
         return list;
     }
 
