@@ -1,0 +1,24 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:registered",
+      "value": "dysoncubeproject:beam"
+    }
+  ],
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "B": "minecraft:iron_bars",
+    "I": "minecraft:iron_block",
+    "N": "minecraft:iron_nugget"
+  },
+  "pattern": [
+    "NIN",
+    "BIB",
+    "NIN"
+  ],
+  "result": {
+    "count": 2,
+    "id": "dysoncubeproject:beam"
+  }
+}

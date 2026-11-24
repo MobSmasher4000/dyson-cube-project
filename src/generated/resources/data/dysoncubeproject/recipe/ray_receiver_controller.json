@@ -1,0 +1,24 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:registered",
+      "value": "dysoncubeproject:ray_receiver_controller"
+    }
+  ],
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "B": "dysoncubeproject:beam",
+    "I": "minecraft:iron_block",
+    "N": "minecraft:smooth_stone_slab",
+    "S": "dysoncubeproject:solar_sail"
+  },
+  "pattern": [
+    "SSS",
+    "NBN",
+    "III"
+  ],
+  "result": {
+    "id": "dysoncubeproject:ray_receiver_controller"
+  }
+}
