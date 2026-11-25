@@ -88,6 +88,12 @@ public class ClientSetup {
         } catch (Exception e) {
             DCPShaders.HOLO_HEX = null;
         }
+        try {
+            ShaderInstance shader = new ShaderInstance(event.getResourceProvider(), ResourceLocation.fromNamespaceAndPath(DysonCubeProject.MOD_ID, "receiver_hex"), DefaultVertexFormat.POSITION_COLOR_TEX);
+            event.registerShader(shader, s -> DCPShaders.RECEIVER_HEX = s);
+        } catch (Exception e) {
+            DCPShaders.RECEIVER_HEX = null;
+        }
         // Register Rail Electric shader
         try {
             ShaderInstance shader = new ShaderInstance(event.getResourceProvider(), ResourceLocation.fromNamespaceAndPath(DysonCubeProject.MOD_ID, "rail_electric"), DefaultVertexFormat.POSITION_COLOR);

@@ -95,15 +95,15 @@ sourceSets.main.resources { srcDir 'src/generated/resources' }
 
 repositories {
     mavenLocal()
-    maven { url 'https://maven.blakesmods.com' }
-    maven { url 'https://maven.blamejared.com' }
-    maven { url 'https://maven.tterrag.com' }
     maven {
         url 'https://cursemaven.com'
         content {
             includeGroup 'curse.maven'
         }
     }
+//    maven { url 'https://maven.blakesmods.com' }
+    maven { url 'https://maven.blamejared.com' }
+    maven { url 'https://maven.tterrag.com' }
     mavenCentral()
     // flatDir {
     //     dir 'libs'

@@ -13,6 +13,7 @@ public class DCPRenderTypes extends RenderType {
     private static RenderType DYSON_SUN;
     private static RenderType HOLOGRAM;
     private static RenderType HOLO_HEX;
+    private static RenderType RECEIVER_HEX;
     private static RenderType RAIL_ELECTRIC_LINES;
     private static RenderType RAIL_BEAM;
 
@@ -94,6 +95,26 @@ public class DCPRenderTypes extends RenderType {
                     state);
         }
         return HOLO_HEX;
+    }
+
+    public static RenderType receiverHex() {
+        if (RECEIVER_HEX == null) {
+            RenderType.CompositeState state = RenderType.CompositeState.builder()
+                    .setShaderState(new ShaderStateShard(() -> DCPShaders.RECEIVER_HEX))
+                    .setTransparencyState(TRANSLUCENT_TRANSPARENCY)
+                    .setDepthTestState(LEQUAL_DEPTH_TEST)
+                    .setCullState(NO_CULL)
+                    .setWriteMaskState(COLOR_WRITE)
+                    .createCompositeState(true);
+            RECEIVER_HEX = RenderType.create("dysoncubeproject_receiver_hex",
+                    DefaultVertexFormat.POSITION_COLOR_TEX,
+                    VertexFormat.Mode.QUADS,
+                    256,
+                    false,
+                    true,
+                    state);
+        }
+        return RECEIVER_HEX;
     }
 
     public static RenderType railBeam() {
